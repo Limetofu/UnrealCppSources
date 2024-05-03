@@ -13,6 +13,12 @@
 #include "Engine.h"
 #include "GameFramework/Actor.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "MeshSimplification.h"
+#include "MeshDescription.h"
+#include "StaticMeshAttributes.h"
+#include "UObject/UObjectGlobals.h"
+#include "AssetRegistry/AssetRegistryModule.h"
+#include "InstancedFoliageActor.h"
 #include "ActorEditorSimpleTool.generated.h"
 
 /**
@@ -66,6 +72,16 @@ public:
 	virtual void Setup() override;
 
 	virtual void OnClicked(const FInputDeviceRay& ClickPos);
+
+	template <typename ActorType>
+	TArray<TPair<ActorType*, FVector>> GetActorColorPairArrayByTag(FString* TargetTag);
+
+
+	template <typename ActorType>
+	void CopySolidColorActorWithNewTag(TArray<TPair<ActorType*, FVector>>& TargetArray, TArray<ActorType*>& ClonedActorArray);
+
+
+
 
 
 protected:

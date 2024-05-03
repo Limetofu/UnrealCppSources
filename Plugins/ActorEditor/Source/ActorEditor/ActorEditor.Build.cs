@@ -1,6 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 using UnrealBuildTool;
+using UnrealBuildTool.Rules;
 
 public class ActorEditor : ModuleRules
 {
@@ -25,9 +26,14 @@ public class ActorEditor : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
+                "GeometryAlgorithms",
+                "DynamicMesh",
 				"Core",
                 "GeometryCore",
                 "GeometryAlgorithms",
+				"MeshDescription",
+                "StaticMeshDescription",
+                "Foliage"
             }
 			);
 			
@@ -46,7 +52,7 @@ public class ActorEditor : ModuleRules
 				"LevelEditor",
 				"InteractiveToolsFramework",
 				"EditorInteractiveToolsFramework",
-                "Foliage",
+                
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
