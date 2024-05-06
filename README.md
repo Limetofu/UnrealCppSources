@@ -24,7 +24,7 @@
 
 
 /* --- Mesh Simplify ---*/
-MeshSimplify <- DynamicMesh 변환 불가피
-(1) UStaticMesh* -> DynamicMesh* 변환
-(2) QEMSimplify 수행
-(3) DynamicMesh* -> UStaticMesh* 재변환
+ - MeshSimplify <- DynamicMesh 변환 불가피
+ - (1) UStaticMesh* -> DynamicMesh* 변환
+ - (2) QEMSimplify 수행
+ - (3) DynamicMesh* -> UStaticMesh* 재변환
